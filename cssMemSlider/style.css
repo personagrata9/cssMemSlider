@@ -19,7 +19,7 @@ body {
   width: calc(var(--total-slides) * 100vw);
   margin-top: -4vw;
   font-size: 0;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .slider-slide {
@@ -35,11 +35,8 @@ body {
 
 #radio1:checked ~ .text-1 {
   transform: translate(0, 2.4vw);
-}
-
-#radio1:checked ~ .checkmark-1 {
-  background: #4f5253;
-  border: 0.2vw solid #f1ed10;
+  width: 21ch;
+  animation: typing 0.75s step-end infinite, printed 3s steps(21);
 }
 
 #radio2:checked ~ .slider {
@@ -48,6 +45,8 @@ body {
 
 #radio2:checked ~ .text-2 {
   transform: translate(0, 0.3vw);
+  width: 22ch;
+  animation: typing 0.75s step-end infinite, printed 3s steps(22);
 }
 
 #radio3:checked ~ .slider {
@@ -56,6 +55,8 @@ body {
 
 #radio3:checked ~ .text-3 {
   transform: translate(0, -1.7vw);
+  width: 14ch;
+  animation: typing 0.75s step-end infinite, printed 3s steps(14);
 }
 
 #radio4:checked ~ .slider {
@@ -64,14 +65,36 @@ body {
 
 #radio4:checked ~ .text-4 {
   transform: translate(0, -3.7vw);
+  width: 19ch;
+  animation: typing 0.75s step-end infinite, printed 3s steps(19);
+}
+
+@keyframes typing {
+  0% {
+    border-color: #f1ed10;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #f1ed10;
+  }
+}
+
+@keyframes printed {
+  from {
+    width: 0;
+  }
 }
 
 .description {
-  width: 70vw;
   margin: 0;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: monospace;
   font-size: 2rem;
   color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.3rem solid #f1ed10;
   transform: translateX(-100vw);
 }
 
