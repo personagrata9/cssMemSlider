@@ -8,26 +8,23 @@ body {
   padding: 0;
 }
 
-[name="slider-group"] {
-  transform: translate(89vw, 88.5vh);
-}
-
 .slider-container {
   overflow: hidden;
-  margin: 2vh 2.5vw;
+  margin: 1vw 2.5vw;
 }
 
 .slider {
   display: flex;
   column-gap: 5vw;
   width: calc(var(--total-slides) * 100vw);
+  margin-top: -4vw;
   font-size: 0;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slider-slide {
   width: 95vw;
-  height: 83vh;
+  max-height: 83vh;
   display: inline-block;
   border-radius: 1rem;
 }
@@ -37,7 +34,12 @@ body {
 }
 
 #radio1:checked ~ .text-1 {
-  transform: translate(0, 2.8vh);
+  transform: translate(0, 2.4vw);
+}
+
+#radio1:checked ~ .checkmark-1 {
+  background: #4f5253;
+  border: 0.2vw solid #f1ed10;
 }
 
 #radio2:checked ~ .slider {
@@ -45,7 +47,7 @@ body {
 }
 
 #radio2:checked ~ .text-2 {
-  transform: translate(0, -0.9vh);
+  transform: translate(0, 0.3vw);
 }
 
 #radio3:checked ~ .slider {
@@ -53,7 +55,7 @@ body {
 }
 
 #radio3:checked ~ .text-3 {
-  transform: translate(0, -4.5vh);
+  transform: translate(0, -1.7vw);
 }
 
 #radio4:checked ~ .slider {
@@ -61,11 +63,12 @@ body {
 }
 
 #radio4:checked ~ .text-4 {
-  transform: translate(0, -8vh);
+  transform: translate(0, -3.7vw);
 }
 
 .description {
   width: 70vw;
+  margin: 0;
   font-family: Verdana, Geneva, sans-serif;
   font-size: 2rem;
   color: #ffffff;
@@ -74,4 +77,71 @@ body {
 
 .yellow {
   color: #f1ed10;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  transform: translate(77vw, 86vh);
+  width: 4vw;
+  height: 4vw;
+  visibility: hidden;
+  margin: 0;
+  cursor: pointer;
+}
+
+input[type="radio"]:hover::before {
+  background: #ffffff;
+}
+
+input[type="radio"]:checked:hover::before {
+  border: 0.35vw solid #ffffff;
+}
+
+input[type="radio"]::after {
+  content: "";
+  display: block;
+  width: 4vw;
+  height: 3vw;
+  visibility: visible;
+}
+
+input[type="radio"]::before {
+  position: relative;
+  top: 1vw;
+  left: 1vw;
+  content: "";
+  display: block;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  background: #f1ed10;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  top: 1vw;
+  left: 1vw;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  border: 0.35vw solid #f1ed10;
+  background: #4f5253;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+
+.label-nav {
+  display: flex;
+  position: relative;
+}
+
+.label {
+  width: 4vw;
+  height: 4vw;
+  background: red;
 }
