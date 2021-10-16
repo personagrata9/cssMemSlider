@@ -37,7 +37,7 @@ body {
 }
 
 #radio1:checked ~ .text-1 {
-  transform: translate(0, 3.6vh);
+  transform: translate(0, 2.8vh);
 }
 
 #radio2:checked ~ .slider {
@@ -45,7 +45,7 @@ body {
 }
 
 #radio2:checked ~ .text-2 {
-  transform: translate(0, 2vh);
+  transform: translate(0, -0.9vh);
 }
 
 #radio3:checked ~ .slider {
@@ -53,7 +53,7 @@ body {
 }
 
 #radio3:checked ~ .text-3 {
-  transform: translate(0, 0.3vh);
+  transform: translate(0, -4.5vh);
 }
 
 #radio4:checked ~ .slider {
@@ -61,12 +61,17 @@ body {
 }
 
 #radio4:checked ~ .text-4 {
-  transform: translate(0, -1.3vh);
+  transform: translate(0, -8vh);
 }
 
 .description {
   width: 70vw;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 2rem;
   color: #ffffff;
-  font-size: 1rem;
   transform: translateX(-100vw);
+}
+
+.yellow {
+  color: #f1ed10;
 }
