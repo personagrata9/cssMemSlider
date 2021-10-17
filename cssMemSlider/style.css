@@ -174,11 +174,12 @@ input[type="radio"]:checked::before {
 
   .slider {
     column-gap: 15vw;
-    margin-top: -6.5vh;
+    margin-top: -9vh;
   }
 
   .slider-slide {
     width: 85vw;
+    max-height: 53vh;
     border-radius: 0.5rem;
   }
 
@@ -217,18 +218,18 @@ input[type="radio"]:checked::before {
   }
 
   #radio1:checked ~ .text-1 {
-    transform: translate(0, 16.6vh);
+    transform: translate(0, 18vh);
   }
 
   #radio2:checked ~ .text-2 {
-    transform: translate(0, 11.8vh);
+    transform: translate(0, 11.2vh);
   }
 
   #radio3:checked ~ .text-3 {
-    transform: translate(0, 6vh);
+    transform: translate(0, 4vh);
   }
 
   #radio4:checked ~ .text-4 {
-    transform: translate(0, 1vh);
+    transform: translate(0, -2.8vh);
   }
 }
