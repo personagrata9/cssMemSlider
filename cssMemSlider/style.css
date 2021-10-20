@@ -5,9 +5,6 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-.wrapper {
   background: #3c3e3f;
 }
 
@@ -15,29 +12,28 @@ body {
   overflow: hidden;
   margin: 0 auto;
   width: 95vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .slider {
   display: flex;
   column-gap: 5vw;
   width: calc(var(--total-slides) * 100vw);
-  margin-top: -5.3vh;
   font-size: 0;
   transition: transform 0.6s ease-in-out;
 }
 
 .slider-slide {
   width: 95vw;
-  max-height: 80.2vh;
+  max-height: 45.11vw;
   display: inline-block;
-  border-radius: 1rem;
+  border-radius: 1vw;
 }
 
 .description {
   margin: 0;
   font-family: monospace;
-  font-size: 2.4rem;
+  font-size: 2.4vw;
   color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
@@ -51,9 +47,9 @@ body {
 
 input[type="radio"] {
   display: inline-block;
-  transform: translate(81vw, 84.4vh);
-  width: 4rem;
-  height: 4rem;
+  transform: translate(76vw, 51.8vw);
+  width: 4vw;
+  height: 4vw;
   visibility: hidden;
   margin: 0;
   cursor: pointer;
@@ -64,25 +60,25 @@ input[type="radio"]:hover::before {
 }
 
 input[type="radio"]:checked:hover::before {
-  border: 0.42rem solid #ffffff;
+  border: 0.42vw solid #ffffff;
 }
 
 input[type="radio"]::after {
   content: "";
   display: block;
-  width: 4rem;
-  height: 3rem;
+  width: 4vw;
+  height: 3vw;
   visibility: visible;
 }
 
 input[type="radio"]::before {
   position: relative;
-  top: 0.8rem;
-  left: 0.8rem;
+  top: 0.8vw;
+  left: 0.8vw;
   content: "";
   display: block;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.4vw;
+  height: 2.4vw;
   border-radius: 50%;
   background: #f1ed10;
   visibility: visible;
@@ -94,12 +90,12 @@ input[type="radio"]:checked::before {
   display: block;
   box-sizing: border-box;
   position: relative;
-  top: 0.8rem;
-  left: 0.8rem;
-  width: 2.4rem;
-  height: 2.4rem;
+  top: 0.8vw;
+  left: 0.8vw;
+  width: 2.4vw;
+  height: 2.4vw;
   border-radius: 50%;
-  border: 0.42rem solid #f1ed10;
+  border: 0.42vw solid #f1ed10;
   background: #3c3e3f;
   visibility: visible;
   transition: all 0.5s ease;
@@ -110,7 +106,7 @@ input[type="radio"]:checked::before {
 }
 
 #radio1:checked ~ .text-1 {
-  transform: translate(0, 4.2vh);
+  transform: translate(0, 3vw);
   width: 21ch;
   animation: typing 0.75s step-end infinite, printed 3s steps(21);
 }
@@ -120,7 +116,7 @@ input[type="radio"]:checked::before {
 }
 
 #radio2:checked ~ .text-2 {
-  transform: translate(0);
+  transform: translate(0, 0.3vw);
   width: 22ch;
   animation: typing 0.75s step-end infinite, printed 3s steps(22);
 }
@@ -130,7 +126,7 @@ input[type="radio"]:checked::before {
 }
 
 #radio3:checked ~ .text-3 {
-  transform: translate(0, -4vh);
+  transform: translate(0, -2.5vw);
   width: 14ch;
   animation: typing 0.75s step-end infinite, printed 3s steps(14);
 }
@@ -140,7 +136,7 @@ input[type="radio"]:checked::before {
 }
 
 #radio4:checked ~ .text-4 {
-  transform: translate(0, -8vh);
+  transform: translate(0, -5.2vw);
   width: 19ch;
   animation: typing 0.75s step-end infinite, printed 3s steps(19);
 }
@@ -174,62 +170,36 @@ input[type="radio"]:checked::before {
 
   .slider {
     column-gap: 15vw;
-    margin-top: -9vh;
   }
 
   .slider-slide {
     width: 85vw;
-    max-height: 53vh;
     border-radius: 0.5rem;
   }
 
-  .description {
-    font-size: 1.2rem;
-  }
-
   input[type="radio"] {
-    transform: translate(25.8vw, 60vh);
-    width: 2rem;
-    height: 2rem;
-  }
-
-  input[type="radio"]:checked:hover::before {
-    border: 0.21rem solid #ffffff;
-  }
-
-  input[type="radio"]::after {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  input[type="radio"]::before {
-    top: 0.4rem;
-    left: 0.4rem;
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-
-  input[type="radio"]:checked::before {
-    top: 0.4rem;
-    left: 0.4rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    border: 0.21rem solid #f1ed10;
-  }
+    display: inline-block;
+    transform: translate(33vw, 55.8vw);
+    width: 4vw;
+    height: 4vw;
+    visibility: hidden;
+    margin: 0;
+    cursor: pointer;
+}
 
   #radio1:checked ~ .text-1 {
-    transform: translate(0, 18vh);
+    transform: translate(0, 14vw);
   }
 
   #radio2:checked ~ .text-2 {
-    transform: translate(0, 11.2vh);
+    transform: translate(0, 11.3vw);
   }
 
   #radio3:checked ~ .text-3 {
-    transform: translate(0, 4vh);
+    transform: translate(0, 8.5vw);
   }
 
   #radio4:checked ~ .text-4 {
-    transform: translate(0, -2.8vh);
+    transform: translate(0, 5.2vw);
   }
 }
